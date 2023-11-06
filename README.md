@@ -56,3 +56,35 @@ This project is open source and available under the [MIT License](LICENSE).
 ## Acknowledgements
 
 Thank you to all participants for joining the workshop, and to the open-source community for providing the tools and resources that make projects like this possible.
+
+# Note for Windows Users
+
+When using this workshop repository on a Windows machine, please consider the following adjustments to ensure compatibility:
+
+- **Docker Installation**: Windows requires WSL2 (Windows Subsystem for Linux version 2) for Docker Desktop. Make sure WSL2 is installed and set up before installing Docker. Follow the [Windows-specific Docker installation guide](https://docs.docker.com/docker-for-windows/install/).
+
+- **File Paths**: Use Windows-style backslashes (`\`) for navigating directories in command-line interfaces like PowerShell or Git Bash.
+
+- **Git for Windows**: Upon installing Git, it's recommended to choose Git Bash as your command-line interface, which allows for Unix-style commands.
+
+- **Command Line Tools**: Use PowerShell or Git Bash for command-line operations as they are more compatible with Unix-style commands.
+
+- **Line Endings**: Git on Windows may change line endings to CRLF (Carriage Return and Line Feed). To prevent this, you can disable automatic conversion using the following command in Git Bash or PowerShell:
+  ```
+  git config --global core.autocrlf input
+  ```
+  This ensures that your Docker containers, which expect LF (Line Feed) line endings, function correctly.
+
+- **Text Editors**: Editors like Notepad++, Visual Studio Code, or the integrated editor in WSL are recommended for a better experience when editing code files on Windows.
+
+- **File Permissions**: If you encounter file permission issues, especially when using volumes with Docker, you may need to adjust the settings within Docker for Windows or modify the file permissions directly in Windows.
+
+- **Environment Variables**: Setting environment variables on Windows can differ from Unix systems. In PowerShell, use `$env:VAR_NAME="value"` to set a variable. In Command Prompt, use `set VAR_NAME=value`.
+
+- **Networking**: Docker networking functions similarly across platforms, but ensure that any firewall or antivirus programs do not block the required ports.
+
+- **Running Scripts**: If there are any .sh (bash) scripts, they should be run in Git Bash or WSL to ensure compatibility. Alternatively, they can be translated to PowerShell scripts if needed.
+
+- **WSL Integration**: For an experience closer to Unix-like environments, consider using WSL. It allows you to run a Linux distribution alongside your Windows environment.
+
+By keeping these points in mind, Windows users should have a seamless experience with the workshop materials. Should you encounter any issues, don't hesitate to open an issue in this repository for support.
