@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  web-workshop:
+    build:
+      context: ..
+      dockerfile: ./Part2_Docker/Dockerfile
+    volumes:
+      - ../Part3_Django:/code
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+    container_name: web-workshop
+    command: tail -f /dev/null # keep container running indefinitely

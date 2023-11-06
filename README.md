@@ -17,7 +17,7 @@ Before you attend the workshop, please ensure you have the following installed:
 
 - [Docker](https://docs.docker.com/get-docker/)
 - [Git](https://git-scm.com/downloads)
-- A text editor of your choice (e.g., [VSCode](https://code.visualstudio.com/download))
+- A text editor of your choice (e.g., [Vim](https://www.vim.org), [Emacs](https://www.gnu.org/software/emacs/), [VSCode](https://code.visualstudio.com/download))
 
 ## How to Use This Repository
 
