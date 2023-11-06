@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to Web Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center; /* Center text by default */
+        }
+        h1 {
+            color: #333;
+            background-color: #eaeaea;
+            padding: 20px;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: green;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer; /* Cursor appears as a pointer on hover over the button */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Web Development</h1>
+    
+    <!-- Button to show the hello world message -->
+    <button onclick="showMessage()">Click Me!</button>
+    
+    <!-- Placeholder for the message -->
+    <div id="message"></div>
+
+    <script>
+        // Function to add content to the page
+        function showMessage() {
+            // Find the message element
+            var messageElement = document.getElementById('message');
+            
+            // Change the text content of the message element
+            messageElement.textContent = 'Hello, World!';
+        }
+    </script>
+
+</body>
+</html>
+

@@ -32,17 +32,15 @@ Once the image is built, you can start the container with the following command:
 docker-compose up
 ```
 
-This command starts the Django development server inside the container, making it accessible through your web browser at `http://localhost:8000`.
+This command starts the Django development container. 
 
 ## What to Expect
 
 When you run `docker-compose up`, Docker will:
 
 - Start a container based on the image built from the `Dockerfile`.
-- Mount the current directory to `/usr/src/app` inside the container, so changes made locally will reflect inside the container.
+- Mount the current directory to `/code` inside the container, so changes made locally will reflect inside the container.
 - Bind your local port 8000 to the container's port 8000, so you can access the Django app in your web browser.
-
-You should see output in your terminal indicating that the server is running, and you will be able to open your web browser to `http://localhost:8000` to see the Django welcome page.
 
 ## Interacting with the Django Container
 
@@ -52,7 +50,7 @@ To interact with the Django server or to run management commands, you can open a
 docker-compose exec web python manage.py <command>
 ```
 
-Replace `<command>` with Django management commands such as `startproject`, `startapp`, `migrate`, etc.
+Replace `<command>` with Django management commands such as `startproject`, `startapp`, `migrate`, `runserver`, etc.
 
 ## Next Steps
 
